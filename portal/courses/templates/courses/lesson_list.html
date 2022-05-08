@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style%}
+<link rel="stylesheet" href="{% static 'courses/css/all_lessons_list.css' %}">
+{% endblock style %}
+
+{% block main %}
+<section class="lessons">
+    <h2 class="lessons__title">
+        {{ title }}
+    </h2>
+    <div class="lessons__title">
+        {% for lesson in lessons %}
+        {% include 'courses/components/_lesson_card.html' %}
+        {% endfor %}
+    </div>
+</section>
+{% endblock main %}

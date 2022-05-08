@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'course/css/lesson_confirm_delete.html' %}">
+{% endblock style %}
+
+{% block main %}
+<form method="post">
+    {% csrf_token %}
+    <p class="lesson_txt">
+        Siz rostdan ham o'chirishni xoxlaysizmi? Dars {{ lesson.number }} kurs "{{ lesson.course }}"
+    </p>
+    <input class="delete-button" type="submit" value="Ha, o'chirish">
+    <a class="back-buton" href="{{ lesson.get_absolute_url }}">
+        Ortga
+    </a>
+</form>
+{% endblock main %}

@@ -1,0 +1,54 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block style %}
+    {% endblock style %}
+
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+
+    <title>
+        {% block title %}
+        {{ title }}
+        {% endblock title %}
+    </title>
+</head>
+
+<body>
+
+<div class="wrapper">
+    {% block header %}
+    {% include 'layout/header.html' %}
+    {% endblock header %}
+
+    <main>
+        {% block messages %}
+        {% include 'components/_messages.html' %}
+        {% endblock messages %}
+
+        {% block main %}
+        {% endblock main %}
+
+        {% block pagination %}
+        {% include 'components/_pagination.html' %}
+        {% endblock pagination %}
+    </main>
+    {% include 'components/_search.html' %}
+</div>
+
+{% block scripts %}
+{% endblock scripts %}
+
+<script src="{% static 'js/drop-down.js' %}"></script>
+<script src="{% static 'js/navbar.js' %}"></script>
+<script src="{% static 'js/search.js' %}"></script>
+
+</body>
+</html>

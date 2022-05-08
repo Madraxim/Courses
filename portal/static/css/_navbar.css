@@ -1,0 +1,126 @@
+
+.nav {
+    position: fixed;
+    left: 0;
+    max-width: 328px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 25px;
+    background: #31323a;
+    -webkit-box-shadow: 0px 0px 2px #b3b3b3;
+            box-shadow: 0px 0px 2px #b3b3b3;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 999;
+  }
+  
+  .nav::-webkit-scrollbar {
+    width: 5px;
+    background: #31323a;
+  }
+  
+  .nav::-webkit-scrollbar-thumb {
+    background-color: #f4714d;
+    border-radius: 30px;
+  }
+  
+  .nav::-webkit-scrollbar-button {
+    background: #31323a;
+  }
+  
+  .nav::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+  
+  .nav__extra, .page__title {
+    color: #f4714d;
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+  .nav__extra{
+  cursor: pointer;
+  }
+
+  
+  .nav__list {
+    max-height: 0;
+    margin-bottom: 50px;
+    overflow: hidden;
+    -webkit-transition: all 10ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+    transition: all 10ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  }
+  
+  .nav__list.active {
+    max-height: 100%;
+    max-width: 200px;
+  }
+  
+  .nav__item {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 8px 35px;
+    border-radius: 10px;
+  }
+  
+  .nav__item:hover {
+    background: #6a5acc;
+  }
+  
+  .nav__link {
+    font-size: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .nav__lesson-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 24px;
+    font-family: "MPLUSRounded1c-Medium";
+  }
+  
+  .nav__btn {
+    width: 50px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    background: #f4714d;
+    margin-right: 20px;
+  }
+  
+  .nav__left-icon {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    transform: scale(-1, 1);
+  }

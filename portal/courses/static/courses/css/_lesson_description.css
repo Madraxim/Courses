@@ -1,0 +1,275 @@
+
+.lesson__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .lesson__title {
+    font-size: 32px;
+    font-family: "MPLUSRounded1c-Medium";
+    color: #fff;
+  }
+  
+  .lesson__date {
+    font-family: "MPLUSRounded1c-ExtraBold";
+    color: #f4714d;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #31323a;
+    -webkit-box-shadow: inset 0px 0px 2px #b3b3b3;
+            box-shadow: inset 0px 0px 2px #b3b3b3;
+  }
+  
+  .lesson__txt {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: "Roboto-Regular";
+  }
+  
+  .lesson__theme {
+    font-family: "MPLUSRounded1c-Medium";
+  }
+  
+  .lesson__video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .lesson__video.active {
+    z-index: -1;
+  }
+  
+  .lesson__video-play {
+    border-radius: 15px;
+  }
+  
+  .lesson__play {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #6a5acc;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 5px #a69fcc;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 5px #a69fcc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 32px;
+  }
+  
+  .lesson__play .fas.fa-play {
+    -webkit-transform: translateX(13%);
+            transform: translateX(13%);
+    color: #fff;
+  }
+  
+  .lesson__play .fas.fa-pause {
+    color: #fff;
+  }
+  
+  .description {
+    padding: 30px 0;
+  }
+  
+  .description__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .description__item {
+    max-width: 300px;
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    background: #31323a;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3), inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .description__item:last-of-type {
+    border-radius: 0px 15px 15px 0px;
+  }
+  
+  .description__item:first-of-type {
+    border-radius: 15px 0px 0px 15px;
+  }
+  
+  .description__item:hover {
+    background: #6a5acc;
+  }
+  
+  .description__item.active {
+    background: #6a5acc;
+  }
+  
+  .description__link {
+    font-family: "MPLUSRounded1c-Medium";
+    font-size: 20px;
+    color: #edeef1;
+  }
+  
+  .description__tab {
+    display: none;
+  }
+  
+  .description__tab.active {
+    display: block;
+  }
+  
+  .description__tab-title {
+    font-family: "MPLUSRounded1c-ExtraBold";
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 35px;
+  }
+  
+  .description__tab-info,
+  .description .tab-message {
+    background: #31323a;
+    -webkit-box-shadow: 0px 0px 2px #b3b3b3;
+            box-shadow: 0px 0px 2px #b3b3b3;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .description__tab-txt {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Roboto-Regular";
+    color: #edeef1;
+    margin-bottom: 30px;
+  }
+  
+  .description__tab-label {
+    position: relative;
+    padding: 6px 18px;
+    background: #6a5acc;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 2px #b3b3b3;
+            box-shadow: 0px 0px 2px #b3b3b3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 18px;
+    font-family: "MPLUSRounded1c-Medium";
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .description .description__tab-file {
+    position: absolute;
+    z-index: -1;
+    width: 100px;
+  }
+  
+  .description__tab-span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .description__tab-icon {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-right: 12px;
+  }
+  
+  .description .tab-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .description__tab-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+  
+  .description__tab-message {
+    width: 100%;
+    background: #1f1f27;
+    -webkit-box-shadow: 0px 0px 1px #fff;
+            box-shadow: 0px 0px 1px #fff;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 18px;
+    max-height: 200px;
+    color: #fff;
+    resize: none;
+    margin-bottom: 30px;
+  }
+  
+  .description__tab-avatar {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  
+  .description__tab-btn {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 18px 48px;
+    background: #6a5acc;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+  }

@@ -1,0 +1,22 @@
+{% load static %}
+{% load courses_tags %}
+
+<div class="header__dropdown">
+    <div class="header__dropdown-icon">
+        <img class="header__user-icon" src="{% static 'img/svg/user.svg' %}">
+        <img class="header__drop-icon" src="{% static 'img/svg/dropdown.svg' %}">
+    </div>
+    {% get_tags as tags %}
+    <ul class="header__dropdown-menu">
+        {% for tag in tags %}
+        <li class="header__dropdown-item">
+            <a href="{% url tag.link %}" class="header__dropdown-link">
+                <span class="linkName">
+                    {{ tag.text }}
+                </span>
+            </a>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>

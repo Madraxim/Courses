@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'courses/css/lesson_details.css' %}">
+{% endblock style %}
+
+{% block title %}
+{{ lesson.course }}: {{ lesson.number }}
+{% endblock title %}
+
+{% block main %}
+{% include 'courses/components/_info.html' %}
+{% include 'courses/components/_description.html' %}
+{% endblock main %}
+
+{% block scripts %}
+<script src="{% static 'courses/js/video_player.js' %}"></script>
+{% endblock scripts %}

@@ -1,0 +1,347 @@
+@import '_fonts.css';
+@import '_navbar.css';
+@import '_header.css';
+@import '_modal_search.css';
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  
+  a {
+    color: #edeef1;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+.pagination{
+display: flex;
+justify-content: center;
+}
+.pagination .page-item{
+padding: 5px;
+border: 1px solid white;
+border-radius: 5px;
+margin: 1px 1px 20px 1px;
+}
+.pagination .page-item.active{
+background-color: white;
+}
+.pagination .page-item.active .page-link{
+color: #000;
+}
+.form-errors{
+color: #721c24;
+background-color: #b86784;
+border-color: #f5c6cb;
+margin-bottom: 30px;
+padding: 15px;
+border-radius: 15px;
+}
+  
+  button,
+  input,
+  textarea,
+  button:focus,
+  textarea,
+  input:focus,
+  video:focus {
+    border: none;
+    outline: none;
+  }
+  
+  body {
+    background: #1f1f27;
+    font-family: "MPLUSRounded1c-Regular";
+  }
+  
+  body::-webkit-scrollbar {
+    width: 5px;
+    background: #31323a;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #f4714d;
+    border-radius: 30px;
+  }
+  
+  body::-webkit-scrollbar-button {
+    background: #31323a;
+  }
+  
+  body::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+  
+  body.lock {
+    overflow: hidden;
+  }
+  
+  .wrapper {
+  max-width: calc(1140px + 465 * ((100vw - 1140px) / 800));
+
+
+    min-height: 95vh;
+    width: 100%;
+    -webkit-box-shadow: inset 0px 0px 2px #b3b3b3;
+            box-shadow: inset 0px 0px 2px #b3b3b3;
+    padding: 0 50px;
+    margin: 0 0 0 auto;
+
+  }
+
+
+.messages li{
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.messages li.success{
+color: #155724;
+background-color: #d4edda;
+border-color: #c3e6cb;
+}
+.messages li.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.messages li.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+  
+  @media (max-width: 1440px) {
+    .wrapper {
+      max-width: 1140px;
+    }
+  }
+
+  @media (max-width: 1383px) {
+  .lessons {
+  margin-left: 40px;
+  }
+  }
+  
+  @media (max-width: 1366px) {
+    .wrapper {
+      max-width: 1051px;
+    }
+    .header__account::after {
+      width: 110.5%;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    body.lock {
+      overflow: hidden;
+    }
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .header {
+      position: -webkit-sticky;
+      position: sticky;
+      width: 100%;
+      top: 0;
+      -webkit-backdrop-filter: blur(25px);
+              backdrop-filter: blur(25px);
+      padding-top: 25px;
+      z-index: 999;
+    }
+    .header .bg {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+    }
+    .header .bg.active {
+      display: block;
+    }
+    .header::after {
+      content: "";
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-item-align: center;
+          align-self: center;
+      width: 100%;
+      margin-top: 25px;
+      height: 1px;
+      -webkit-box-shadow: inset 0px 0px 2px #b3b3b3;
+              box-shadow: inset 0px 0px 2px #b3b3b3;
+      background: #31323a;
+    }
+    .header__account {
+      padding: 0 25px;
+    }
+    .header__account::after {
+      display: none;
+    }
+    .header__menu {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      padding-left: 25px;
+      display: block;
+    }
+    .header__menu .fal.fa-bars {
+      color: #fff;
+      font-size: 24px;
+    }
+    .nav {
+      left: -100%;
+      -webkit-transition: .5s;
+      transition: .5s;
+    }
+    .nav.active {
+      left: 0;
+      top: 0;
+      height: 100vh;
+    }
+    main {
+      padding: 25px 25px 0;
+    }
+    .lessons {
+    margin-left: 0;
+    }
+  }
+  @media (max-width: 1065px) {
+  .lesson__video {
+  max-width: 33%;
+  }
+  }
+
+
+  
+  @media (max-width: 768px) {
+    .wrapper {
+
+    }
+    .nav {
+      width: 35%;
+    }
+    .nav .header__title {
+      font-size: 46px;
+    }
+    .nav .logo {
+      font-size: 24px;
+    }
+    .nav__extra {
+      font-size: 20px;
+    }
+    .nav__lesson-link {
+      font-size: 20px;
+    }
+    .nav__btn {
+      width: 40px;
+      height: 40px;
+    }
+    .nav__right-icon {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+    }
+    .header__btn {
+      font-size: 16px;
+      padding: 12px 30px;
+    }
+    .header__user-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .header__dropdown-list {
+      min-width: 200px;
+    }
+    .header .linkName {
+      font-size: 14px;
+    }
+    .header .linkName::after {
+      min-width: 170px;
+    }
+    .header__dropdown-extraDad, .header__dropdown-extraSon {
+      position: unset;
+      padding-bottom: 0;
+    }
+    .header__dropdown-extraDad {
+      -webkit-transform: translate(-15px, 13px);
+              transform: translate(-15px, 13px);
+    }
+    .header .linkName__icon,
+    .header .linkName__icon_child,
+    .header .linkName__icon_child2 {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+    .header .linkName__icon_child {
+      left: 182%;
+    }
+    .header .linkName__icon_child2 {
+      left: 109%;
+    }
+    .lessons__video {
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .nav {
+      width: 50%;
+    }
+    .header__menu {
+      padding-left: 15px;
+    }
+    .header__account {
+      padding: 0 15px;
+    }
+    main {
+      padding: 15px;
+    }
+    .lessons__menu {
+    display: flex;
+    justify-content: center;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .nav {
+      width: 100%;
+    }
+    .header__user-name {
+      display: none;
+    }
+    .lessons__video {
+    max-width: 100%;
+    }
+  }

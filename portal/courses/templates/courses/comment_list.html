@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'courses/css/comment_list.css' %}">
+{% endblock style %}
+
+{% block main %}
+{% if page_obj.number == 1 %}
+{% include 'courses/components/_comment_form.html' %}
+{% endif %}
+
+{% for comment in page_obj %}
+{% include 'courses/components/_comment_card.html' %}
+{% empty %}
+<p style="color: white;">Komentariya otsutstvuet</p>
+{% endfor %}
+{% endblock main %}

@@ -1,0 +1,18 @@
+<section class="description">
+    <div class="description__tabs">
+        <div class="description__tab-info">
+            <div class="description__btn-box">
+                {% include 'courses/components/_description_btns.html' %}
+            </div>
+            <div style="color: white;">
+                <h3>Tavsifi</h3>
+                {{ lesson.description|linebreaks }}
+
+                {% if lesson.script %}
+                <h3>Script</h3>
+                {{ lesson.script|linebreaks }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

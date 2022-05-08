@@ -1,0 +1,48 @@
+<div class="comment__box">
+    <div class="comment__box-author">
+        <p class="author-position">
+            {% if comment.author.is_superuser %}
+            Moderator
+            {% else %}
+            Guruh foydalanuvchisi
+            {% endif %}
+        </p>
+        <p class="author-username">
+            {{ comment.author.username }}
+        </p>
+        <p class="author-last_login">
+            So'nggi tashrif
+        </p>
+        <p class="author-last_login">
+            {{ comment.author.last_login }}
+        </p>
+    </div>
+    <div class="comment__box-info">
+        <div class="comment__lesson">
+            <p class="comment__title">
+                {{ lesson.course }}. {{ lesson.number }}
+            </p>
+            <p class="comment__created_at">
+                Qo'yilgan vaqti: {{ comment.created_at }}
+            </p>
+        </div>
+        <div class="comment__text">
+            <p class="text">
+                {{ comment.text|linebreaksbr }}
+            </p>
+            {% if comment.author == request.user or request.user.is_superuser %}
+            <p class="comment-updated_at">
+                <a href="
+                {% if request.GET.page %}
+                {% url 'comment_delete' request.GET.page comment.lesson_id comment.pk %}
+                {% else %}
+                {% url 'comment_delete' 1 comment.lesson_id comment.pk %}
+                {% endif %}
+">
+                    O'chirish
+                </a>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>

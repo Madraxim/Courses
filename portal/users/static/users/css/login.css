@@ -1,0 +1,238 @@
+@import '_fonts.css'
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+.messages{
+padding: 0px;
+margin: 0px;
+}
+.messages li{
+    padding: .75rem 1.25rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.messages li.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.messages li.info {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.form-errors{
+color: #721c24;
+background-color: #f8d7da;
+border-color: #f5c6cb;
+margin-bottom: 30px;
+padding: 15px;
+border-radius: 15px;
+}
+
+a {
+  color: #edeef1;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+button,
+input,
+textarea,
+button:focus,
+textarea,
+input:focus,
+video:focus {
+  border: none;
+  outline: none;
+}
+
+body {
+  background: #1f1f27;
+  font-family: "MPLUSRounded1c-Regular";
+  margin-top: 50px;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background: #31323a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f4714d;
+  border-radius: 30px;
+}
+
+body::-webkit-scrollbar-button {
+  background: #31323a;
+}
+
+body::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border: 1px grey solid;
+  margin: 10px;
+}
+
+.form__title {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.username, .password {
+  padding: 12px 15px;
+  background: #31323a;
+  border-radius: 10px;
+  color: #b3b3b3;
+  font-size: 16px;
+  -webkit-box-shadow: 0px 0px 2px #B3B3B3;
+          box-shadow: 0px 0px 2px #B3B3B3;
+}
+
+.username {
+  margin-bottom: 40px;
+}
+
+.form__link {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 10px 0 40px;
+  color: #7F7F7F;
+}
+
+.form__btn {
+  padding: 12px 40px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 15px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background: #6a5acc;
+  font-family: "MPLUSRounded1c-Regular";
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+@media (max-width: 1440px) {
+  .wrapper {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .wrapper {
+    max-width: 1051px;
+  }
+}
+
+@media (max-width: 1280px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+  .bg.active {
+    display: block;
+  }
+  .header__menu {
+    position: absolute;
+    top: 5%;
+    padding-left: 25px;
+    display: block;
+  }
+  .header__menu .fal.fa-bars {
+    color: #fff;
+    font-size: 24px;
+  }
+  .nav {
+    left: -100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .nav.active {
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    width: 35%;
+  }
+  .nav__extra {
+    font-size: 20px;
+  }
+  .header__title {
+    font-size: 46px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    background: url(../img/PROWEB.png) 90% 50%/10% no-repeat;
+  }
+  .nav {
+    width: 100%;
+  }
+}

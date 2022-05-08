@@ -1,0 +1,14 @@
+<div class="nav_dropdown">
+    <p class="nav__extra">
+        {{ nav_title }} <span class="nav__plus">+</span>
+    </p>
+    <ul class="nav__list">
+        {% for item in items %}
+        <li class="nav__item">
+            <a class="nav__link" href="{{ item.get_absolute_url }}">
+                {{ item }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

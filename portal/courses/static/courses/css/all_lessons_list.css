@@ -1,0 +1,120 @@
+
+
+.lessons {
+    padding-bottom: 25px;
+  }
+
+  .lessons__title {
+    font-family: "MPLUSRounded1c-ExtraBold";
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+  
+  .lessons__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: left;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px 5px 0;
+    background: #31323a;
+    border-radius: 15px;
+  }
+  
+  .lessons__video {
+  max-width: 33%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .lessons__link{
+  position: absolute;
+  top: 0;
+  left: 15px;
+  bottom: 0;
+  right: 15px;
+  z-index: 99;
+  }
+
+  .lessons__video-lesson {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .lessons__video-play {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border-radius: 15px 15px 0 0;
+  }
+  
+
+  .lessons__time {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 6px;
+    background: rgba(31, 31, 39, 0.8);
+    border-radius: 5px;
+    color: #fff;
+    font-family: "MPLUSRounded1c-Medium";
+  }
+  .lessons__course{
+  position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 8px;
+    background: rgba(31, 31, 39, 0.8);
+    border-radius: 5px;
+    color: #f4714d;
+    font-family: "MPLUSRounded1c-ExtraBold";
+  }
+
+  .lessons__txt {
+    font-size: 18px;
+    color: #edeef1;
+    font-family: "MPLUSRounded1c-Medium";
+    padding: 20px;
+    background: #1f1f27;
+    border-radius: 0 0 15px 15px;
+  } 
+  
+  @media (max-width: 1024px) {
+    .lessons__title {
+      font-size: 28px;
+    }
+    .lessons__time {
+      font-size: 14px;
+      padding: 4px 5px;
+      bottom: 10px;
+      right: 10px;
+    }
+    .lessons__txt {
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+  @media (max-width: 1059px) {
+      .lessons__video {
+      max-width: 50%;
+    }
+  }
+    @media (max-width: 576px) {
+      .lessons__video {
+      max-width: 100%;
+    }
+  }

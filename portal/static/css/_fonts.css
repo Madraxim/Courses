@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'MPLUSRounded1c-Black';
+  src: url(../fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Black.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-Bold';
+  src: url(../fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-ExtraBold';
+  src: url(../fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-Light';
+  src: url(../fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Light.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-Medium';
+  src: url(../fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-Regular';
+  src: url(../fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-Thin';
+  src: url(../fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}

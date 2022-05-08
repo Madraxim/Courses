@@ -1,0 +1,40 @@
+{% load static %}
+<section class="lesson">
+    <div class="lesson__date-course">
+        <p class="lesson__course">
+            {{ lesson.course }}
+        </p>
+        <div class="update-box">
+            <p class="lesson__date">
+                Oxirgi o'zgargan vaqti: {{ lesson.updated_at }}
+            </p>
+            <a href="{{ lesson.get_update_url }}">
+                <i class="fas fa-edit" style="color: white; font-size: 40px;"></i>
+            </a>
+            <a href="{{ lesson.get_delete_url }}">
+                <i class="fas fa-trash-alt" style="color: white; font-size: 40px;"></i>
+            </a>
+        </div>
+    </div>
+    <div class="lesson__info">
+        <h2 class="lesson__title">
+            Dars {{ lesson.number }}
+        </h2>
+        <a class="lesson_comments" href="{{ lesson.get_comment_url }}">
+            Suhbatga o'tish
+        </a>
+    </div>
+    <p class="lesson__txt">
+        <span class="lesson__theme">
+            Dars mavzusi:
+        </span>
+        {{ lesson.title }}
+    </p>
+    <div class="lesson__video">
+        <div class="content" style="width: 1200px;">
+            <div class="video" data-src="{{ lesson.video.url }}" data-rate="0.5,1,1.5">
+
+            </div>
+        </div>
+    </div>
+</section>

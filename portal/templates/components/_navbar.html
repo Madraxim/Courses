@@ -1,0 +1,33 @@
+{% load static %}
+{% load courses_tags %}
+
+<nav class="header__nav nav">
+    <a class="header__logo logo" href="{% url 'lessons_list' %}">
+        <span class="header__title">Django</span>
+    </a>
+    {% if request.path == '/' or 'courses' in request.path %}
+    {% all_courses as items %}
+    {% include 'components/_nav_dropdown.html' %}
+    {% elif 'lesson' in request.path %}
+    {% get_all_lessons_by_course lesson.course.pk as items %}
+    {% include 'components/_nav_dropdown.html' %}
+    {% else %}
+    <div>
+        <p class="page__title">
+            {{ title }}
+        </p>
+        <a class="nav__lesson-link"
+           {% if lesson %}
+           href="{{ lesson.get_absolute_url }}"
+           {% else %}
+           href="{% url 'lessons_list' %}"
+           {% endif %}>
+            <span class="nav__btn">
+                <img src="{% static 'img/svg/right.svg' %}" class="nav__left-icon">
+            </span>
+            Ortga
+        </a>
+    </div>
+    {% endif %}
+
+</nav>

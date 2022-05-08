@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load users_tags %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'users/css/register.css' %}">
+{% endblock style %}
+
+{% block main %}
+<form class="form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include 'components/_form_errors.html' %}
+
+    <h2 class="form__title">Registratsiya</h2>
+    <div class="form__box">
+        <div class="form__item">
+            {{ form.first_name }}
+            {{ form.last_name }}
+            {{ form.username }}
+        </div>
+        <div class="form__item">
+            {{ form.email }}
+
+            {% get_data 'course' as courses %}
+            <select name="course" class="form__inp" id="id_courses">
+                {% for course in courses %}
+                <option value="{{ course.pk }}">{{ course.title }}</option>
+                {% endfor %}
+            </select>
+
+            {% get_data 'group' as groups %}
+            <select name="group" class="form__inp" id="id_groups">
+                {% for group in groups %}
+                <option value="{{ group.pk }}">{{ group.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="{{ form.photo.id_for_label }}" style="color: white;">
+                Rasm
+            </label> {{ from.photo }}
+
+        </div>
+    </div>
+    <button class="form__btn" type="submit">Akkaut ochish</button>
+</form>
+{% endblock main %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="lessons__video">
+    <a class="lessons__link" href="{{ lesson.get_absolute_url }}"></a>
+    <div class="lessons__video-lessons">
+        <img class="lessons__video-play" src="{% static 'courses/img/lesson_1.png' %}">
+        <p class="lessons__time">{{ lesson.created_at }}</p>
+        <p class="lessons__course">{{ lesson.course }}</p>
+    </div>
+    <p class="lessons__txt">Dars {{ lesson.number }}: {{ lesson.title }}</p>
+</div>

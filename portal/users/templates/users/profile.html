@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'users/css/profile.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div class="user-box">
+    <div class="user-info">
+        <div class="user-photo" style="width: 100px;">
+            <img src="{{ request.user.get_photo_url }}" style="width: 100%;">
+        </div>
+        <div class="tb-name">
+            <p>Ism va familiya: </p>
+            <p>Kurs: </p>
+            <p>Status: </p>
+            <p>Login: </p>
+            <p>Parol: </p>
+        </div>
+
+        <div class="user">
+            {% if request.user.first_name or request.user.last_name %}
+            <p>{{ request.user.first_name }} {{ request.user.last_name }}</p>
+            {% else %}
+            <p>Ko'rsatilmagan</p>
+            {% endif %}
+
+            {% if request.user.is_superuser %}
+            <p>Moderator</p>
+            <p>Moderator</p>
+            {% else %}
+            <p>{{ request.user.course }}</p>
+            <p>{{ request.user.groups.all.0 }}</p>
+            {% endif %}
+            <p>{{ request.user.username }}</p>
+            <p><a href="{% url 'change_password' %}">Parolni o'zgartirish</a></p>
+            <p><a href="#">Rasmni o'zgartirish</a></p>
+        </div>
+
+    </div>
+</div>
+{% endblock main %}

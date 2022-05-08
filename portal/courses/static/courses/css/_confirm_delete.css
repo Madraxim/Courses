@@ -1,0 +1,29 @@
+.btn-box{
+display: flex;
+width: 300px;
+justify-content: space-around;
+}
+
+.btn-box input, .btn-box a {
+padding: 15px 46px;
+border-radius: 15px;
+font-family: "Roboto-Regular";
+font-size: 20px;
+color: #edeef1;
+}
+
+.delete-button{
+background: red;
+cursor: pointer;
+}
+
+.back-button{
+background: #6a5acc;
+}
+
+.lesson_txt{
+color: #fff;
+font-size: 30px;
+margin-bottom: 30px;
+font-family: "Roboto-Regular";
+}

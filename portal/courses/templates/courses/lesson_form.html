@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'courses/scc/new_lesson.css' %}">
+{% endblock style %}
+
+{% block main %}
+<form class="form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include 'components/_form_errors.html' %}
+    <h2 class="form__title">
+        {{ title }}
+    </h2>
+    <div class="form__box">
+        {{ form.course }}
+        {{ form.number }}
+        {{ form.title }}
+    </div>
+    {{ form.description }}
+    {{ form.script }}
+    <div class="form__btns">
+        Video {{ form.video }}
+        Dars materiallari {{ form.materials }}
+        Uy ishi {{ form.homework }}
+        Qo'shimcha material {{ form.additional_materials }}
+    </div>
+    {{ form.is_published }}
+    <div class="is_published-box">
+        <label for="{{ form.is_published.id_for_label }}">
+            Hozziroq opublikovat qilasizmi?
+        </label>
+    </div>
+    <button class="form__btn" type="submit">
+        {% if 'add' in request.path %}
+            Qo'shish
+        {% else %}
+            Yangilash
+        {% endif %}
+    </button>
+</form>
+{% endblock main %}

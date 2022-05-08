@@ -1,0 +1,10 @@
+{% load static %}
+{% for file in files %}
+<a class="description__tab-label" href="{{ file.url }}" download="">
+    <span class="description__tab-span">
+        <img src="{% static 'courses/img/svg/download.svg' %}">
+    </span>
+    {{ file.text }}
+</a>
+{% endfor %}
+

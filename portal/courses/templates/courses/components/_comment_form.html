@@ -1,0 +1,8 @@
+<form method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include 'components/_form_errors.html' %}
+    <div class="form-text">
+        {{ form.text }}
+    </div>
+    <button class="form__btn" type="submit">Qo'shish</button>
+</form>
